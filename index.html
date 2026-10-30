@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pallav Jain · AI Engineer</title>
-<meta name="description" content="Pallav Jain, AI engineer: production RAG and agent systems that are measured against sealed evals, permissioned in the database, and shipped.">
+<meta name="description" content="Pallav Jain, AI engineer and forward deployed engineer: production RAG and agent systems that are measured against sealed evals, permissioned in the database, and shipped.">
 <meta property="og:title" content="Pallav Jain · AI Engineer">
 <meta property="og:description" content="Role-aware RAG, tool-calling agents and LLM evaluation: measured, permissioned, shipped.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@
   .metric span { display: block; font-size: 13.5px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
 
   /* tabs */
-  .tabs { display: flex; gap: 8px; margin-top: 26px; border-bottom: 1px solid var(--line); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 26px; border-bottom: 1px solid var(--line); }
   .tab { background: none; border: 0; color: var(--muted); font: 600 15px Inter, sans-serif; padding: 10px 16px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
   .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
   .panel { background: var(--card); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 14px 14px; padding: 26px; }
@@ -132,7 +132,7 @@
 
 <main class="wrap">
   <header class="hero" id="home">
-    <div class="cat">AI Engineering · RAG · Agents · LLM Evaluation</div>
+    <div class="cat">AI Engineering · Forward Deployed · RAG · Agents · LLM Evaluation</div>
     <h1>LLM systems that are <em>measured</em>, <em>permissioned</em> and <em>shipped</em>.</h1>
     <p>I'm an AI engineer with 8+ years of software engineering on consumer-scale products. I build retrieval pipelines and tool-calling agents end to end, and I decide how a system will be measured before I build it, enforce permissions in the database rather than the prompt, and write up what broke.</p>
     <div class="btns">
@@ -159,8 +159,9 @@
     <div class="kicker">Why hire me</div>
     <h2>Pick a view</h2>
     <div class="tabs" role="tablist" aria-label="Audience">
-      <button class="tab" role="tab" id="tab-rec" aria-controls="panel-rec" aria-selected="true">Recruiter view</button>
-      <button class="tab" role="tab" id="tab-hm" aria-controls="panel-hm" aria-selected="false" tabindex="-1">Hiring manager view</button>
+      <button class="tab" role="tab" id="tab-rec" aria-controls="panel-rec" aria-selected="true">Recruiter</button>
+      <button class="tab" role="tab" id="tab-hm" aria-controls="panel-hm" aria-selected="false" tabindex="-1">Hiring manager</button>
+      <button class="tab" role="tab" id="tab-fde" aria-controls="panel-fde" aria-selected="false" tabindex="-1">Forward deployed</button>
     </div>
     <div class="panel" role="tabpanel" id="panel-rec" aria-labelledby="tab-rec">
       <h3>The 30-second fit</h3>
@@ -180,6 +181,17 @@
         <li><b>Evaluation:</b> golden sets written before code, sealed held-out sets run once, pre-registered predictions; RAGAS faithfulness plus code-graded Recall@5 / MRR@10, key facts and citations; deterministic agent evals (tool selection, call budgets, confirmation ordering, grounding).</li>
         <li><b>Agents:</b> Claude Agent SDK with an in-process MCP server; LangGraph tool loops; schema-validated tools, restricted SQL permissions, human approval.</li>
         <li><b>Production:</b> OpenTelemetry traces per stage (Jaeger), Prometheus p95 / tokens / cost, a role-scoped semantic cache, rate limits and spend caps, Docker on AWS.</li>
+      </ul>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-fde" aria-labelledby="tab-fde" hidden>
+      <h3>The forward deployed fit</h3>
+      <ul>
+        <li><b>From problem to live system:</b> I took the Copilot from a written plan to a public HTTPS deployment on AWS (Docker Compose, Caddy, firewall, budget alerts), with a deploy runbook anyone can follow.</li>
+        <li><b>Fits the data and permissions a company already has:</b> access rules are mapped onto Postgres roles and row-level security, so the AI sees only what each user is allowed to see.</li>
+        <li><b>Agentic platform work:</b> MCP servers, the Claude Agent SDK and LangGraph tool loops, with schema-validated tools, restricted permissions and human approval before actions.</li>
+        <li><b>Proves value with evidence:</b> success metrics defined up front, then a sealed held-out run; model and provider choices made on measured quality, latency and cost (1/17th the cost at higher accuracy).</li>
+        <li><b>Adapts to the environment:</b> the same system runs fully local (Ollama, open-source reranker) or on hosted APIs (Voyage, Claude) by switching one profile.</li>
+        <li><b>Leaves it operable:</b> traces, metrics, rate limits and spend caps in place, plus design notes that record every decision and every failure.</li>
       </ul>
     </div>
   </section>
@@ -297,11 +309,11 @@
     <div class="contact">
       <div class="kicker">Contact</div>
       <h2>Let's build AI systems people can trust.</h2>
-      <p>Open to AI engineer and applied AI roles: RAG, agents and LLM evaluation.</p>
+      <p>Open to AI engineer, applied AI and forward deployed engineer roles: RAG, agentic platforms and LLM evaluation.</p>
       <div class="btns">
         <a class="btn primary" href="mailto:jnpallav.jain@gmail.com">jnpallav.jain@gmail.com</a>
         <a class="btn" href="https://github.com/jnpallav-jain" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn" href="LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/jnpallavjain/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
   </section>
