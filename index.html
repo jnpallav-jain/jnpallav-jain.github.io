@@ -231,6 +231,35 @@
         </div>
       </article>
 
+      <article class="proj featured">
+        <div class="tag">Featured · Multi-agent · Evaluation · Deployed</div>
+        <h3>Bug-triage agents</h3>
+        <div class="cols">
+          <div>
+            <p>A LangGraph multi-agent system that triages bug reports. A supervisor routes each request, three investigators search the code in parallel (stack trace, described behavior, recent commits), a verifier checks each suspect against the lines it cites, and a person approves every GitHub issue before it's filed. It's scored on AnkiDroid bugs that maintainers already fixed, each investigated against the code from before its report.</p>
+            <div class="chips">
+              <span class="chip">87–90% fixed file in top 5 (held-out)</span>
+              <span class="chip">Single agent: 85–92% at ~⅓ the cost</span>
+              <span class="chip">Hybrid search: 69%</span>
+              <span class="chip">10/10 injection attempts blocked</span>
+              <span class="chip">≈ $0.019 / bug</span>
+            </div>
+          </div>
+          <ul>
+            <li>Built a single-agent baseline and measured both: multi-agent tied it at about 3× the cost</li>
+            <li>39 held-out bugs never used for tuning; each LLM method run twice to show run-to-run variance</li>
+            <li>Agents can only read; filing happens in code, after human approval, to a sandbox repo</li>
+            <li>Report text never reaches the router or the issue writer, closing a prompt-injection path</li>
+            <li>Every tool locked to the code, history and issues from before the report</li>
+          </ul>
+        </div>
+        <div class="tech"><span>Python</span><span>LangGraph</span><span>FastAPI</span><span>Claude API</span><span>Voyage AI</span><span>PostgreSQL</span><span>pg_search</span><span>pgvector</span><span>tree-sitter</span><span>Docker</span><span>AWS</span></div>
+        <div class="links">
+          <a href="https://bugs.18-225-205-193.sslip.io" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/jnpallav-jain/bug-triage-agents" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </article>
+
       <article class="proj">
         <div class="tag">Agent evaluation · Shipped app</div>
         <h3>CardWise assistant evaluation</h3>
