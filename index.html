@@ -51,6 +51,7 @@
   /* metrics */
   .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
   .metric { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .metric i { display: block; font: 500 11.5px var(--mono); font-style: normal; letter-spacing: .5px; text-transform: uppercase; color: var(--accent2); margin-bottom: 8px; }
   .metric b { display: block; font-size: 34px; font-weight: 800; letter-spacing: -1px; color: var(--accent); }
   .metric strong { display: block; font-size: 15px; margin-top: 2px; }
   .metric span { display: block; font-size: 13.5px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
@@ -137,7 +138,8 @@
     <p>I'm an AI engineer with 8+ years of software engineering on consumer-scale products. I build retrieval pipelines and tool-calling agents end to end, and I decide how a system will be measured before I build it, enforce permissions in the database rather than the prompt, and write up what broke.</p>
     <div class="btns">
       <a class="btn primary" href="#projects">See the projects</a>
-      <a class="btn" href="https://18-225-205-193.sslip.io" target="_blank" rel="noopener">Try the live demo ↗</a>
+      <a class="btn" href="https://18-225-205-193.sslip.io" target="_blank" rel="noopener">Copilot demo ↗</a>
+      <a class="btn" href="https://bugs.18-225-205-193.sslip.io" target="_blank" rel="noopener">Bug-triage demo ↗</a>
       <a class="btn" href="https://github.com/jnpallav-jain" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="badges">
@@ -148,10 +150,10 @@
     </div>
 
     <div class="metrics">
-      <div class="metric"><b>1.00</b><strong>Recall@5</strong><span>on a sealed held-out set, run once on a frozen config</span></div>
-      <div class="metric"><b>0.99</b><strong>RAGAS faithfulness</strong><span>claims backed by the retrieved sources, held-out set</span></div>
-      <div class="metric"><b>0 / 58</b><strong>unauthorized retrievals</strong><span>including prompt-injection role claims, checked at every stage</span></div>
-      <div class="metric"><b>1/17th</b><strong>the cost</strong><span>production model chosen by eval: 40/40 vs 31/40 tasks</span></div>
+      <div class="metric"><i>Enterprise Knowledge Copilot</i><b>1.00</b><strong>Recall@5</strong><span>on a sealed held-out set, run once on a frozen config</span></div>
+      <div class="metric"><i>Enterprise Knowledge Copilot</i><b>0 / 58</b><strong>unauthorized retrievals</strong><span>including prompt-injection role claims, checked at every stage</span></div>
+      <div class="metric"><i>Bug-triage agents</i><b>87–90%</b><strong>fixed file in the top 5</strong><span>on 39 held-out bugs; a single agent tied it at ~⅓ the cost</span></div>
+      <div class="metric"><i>CardWise assistant</i><b>1/17th</b><strong>the cost</strong><span>production model chosen by eval: 40/40 vs 31/40 tasks</span></div>
     </div>
   </header>
 
@@ -167,7 +169,7 @@
       <h3>The 30-second fit</h3>
       <ul>
         <li><b>8+ years shipping software</b> to consumer scale, now focused on production LLM systems.</li>
-        <li><b>Shipped, not just prototyped:</b> a public RAG demo on AWS, and agent evaluation for an app on Google Play.</li>
+        <li><b>Shipped, not just prototyped:</b> public RAG and multi-agent demos on AWS, and agent evaluation for an app on Google Play.</li>
         <li><b>Numbers, not adjectives:</b> 1.00 Recall@5 and 0.99 faithfulness on held-out data; a model choice that saved ~94% per run.</li>
         <li><b>Safety-minded:</b> access control enforced by the database; 0 of 58 unauthorized-access attempts succeeded.</li>
         <li><b>Clear communicator:</b> every project documents its decisions, its failures and how they were found.</li>
