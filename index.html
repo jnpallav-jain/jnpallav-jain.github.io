@@ -149,6 +149,7 @@
       <a class="btn primary" href="#projects">See the projects</a>
       <a class="btn" href="https://18-225-205-193.sslip.io" target="_blank" rel="noopener">Copilot demo ↗</a>
       <a class="btn" href="https://bugs.18-225-205-193.sslip.io" target="_blank" rel="noopener">Bug-triage demo ↗</a>
+      <a class="btn" href="https://163-192-211-133.sslip.io" target="_blank" rel="noopener">Dental assistant demo ↗</a>
       <a class="btn" href="https://github.com/jnpallav-jain" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="badges">
@@ -212,6 +213,34 @@
     <h2>Built, measured, shipped</h2>
     <p class="lead">Each project ships with its eval set, its numbers and a write-up of what broke.</p>
     <div class="projects">
+
+      <article class="proj featured">
+        <div class="tag">Featured · Voice AI · Healthcare · Deployed</div>
+        <h3>Dental Chairside Assistant</h3>
+        <div class="cols">
+          <div>
+            <p>A medical speech-to-text AI assistant for dentists. The dentist talks through the exam and the tooth chart fills itself live. Chairside, the dentist can show the patient how much they'll pay after insurance for each procedure, calculated by code from the eligibility check. The visit becomes a draft note where every line links to its source, and the dentist reviews and signs it. Runs fully local on a Mac or in the cloud behind one switch.</p>
+            <div class="chips">
+              <span class="chip">97.5% chart accuracy from audio</span>
+              <span class="chip">0 wrong insurance amounts</span>
+              <span class="chip">599/599 note facts covered</span>
+              <span class="chip">0 unsourced note lines</span>
+              <span class="chip">≈ $0.01–0.02 / visit</span>
+            </div>
+          </div>
+          <ul>
+            <li>A rule parser matched a 14b LLM on chart accuracy (96.4% vs 96.1%) with no delay, so the LLM became a background checker that flags disagreements</li>
+            <li>Whisper on Groq beat Deepgram on chart accuracy (97.5% vs 94.9%) at 1/12 the cost</li>
+            <li>Money is never generated: the AI writes the patient message, code adds every amount</li>
+            <li>An LLM judge, calibrated against hand review (36% → 79% agreement), found two faithfulness errors that became code checks</li>
+            <li>Measured on a synthetic dev set; no real patient data</li>
+          </ul>
+        </div>
+        <div class="tech"><span>Python</span><span>FastAPI</span><span>Pipecat</span><span>WebRTC</span><span>Whisper</span><span>Groq</span><span>Ollama</span><span>Claude API</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span></div>
+        <div class="links">
+          <a href="https://163-192-211-133.sslip.io" target="_blank" rel="noopener">Live demo ↗</a>
+        </div>
+      </article>
 
       <article class="proj featured">
         <div class="tag">Featured · RAG · Security · Deployed</div>
